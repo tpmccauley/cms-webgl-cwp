@@ -39,11 +39,11 @@
 			}
 
 			.reveal a:hover {
-				color: #efdcdc;
+				color: lightblue;
 			}
 
 			.reveal a:hover img {
-				border-color: #efdcdc;
+				border-color: lightblue;
 			}
 
 			.reveal .controls .navigate-left,
@@ -67,19 +67,19 @@
 			}
 
 			.reveal .controls .navigate-left.enabled:hover {
-				border-right-color: #efdcdc;
+				border-right-color: lightblue;
 			}
 
 			.reveal .controls .navigate-right.enabled:hover {
-				border-left-color: #efdcdc;
+				border-left-color: lightblue;
 			}
 
 			.reveal .controls .navigate-up.enabled:hover {
-				border-bottom-color: #efdcdc;
+				border-bottom-color: lightblue;
 			}
 
 			.reveal .controls .navigate-down.enabled:hover {
-				border-top-color: #efdcdc;
+				border-top-color: lightblue;
 			}
 
 			.reveal h1,
@@ -121,11 +121,11 @@
 					<div>
           	<p>Tom McCauley</p>
 						<p>
-							<a>thomas.mccauley@cern.ch</a>
+							<a href="https://github.com/tpmccauley" target="_blank">thomas.mccauley@cern.ch</a>
 						</p>
           	<p>University of Notre Dame, USA</p>
 						<p>
-							CWP Visualization Workshop
+							<a href="https://indico.cern.ch/event/617054/" target="_blank">CWP Visualization Workshop</a>
 						</p>
 						<p>
 							28-30 Mar 2017, CERN
@@ -136,11 +136,134 @@
 				</section>
 
 				<section>
-					...
+					<h2>Outline</h2>
+					<section>
+						<p>
+							<a href="https://github.com/cms-outreach/ispy-webgl" target="_blank">iSpy WebGL</a>,
+								the browser-based display for CMS using <a href="https://www.khronos.org/webgl/" target="_blank">WebGL</a> and
+								 <a href="https://threejs.org/" target="_blank">three.js</a>
+								 was first released in December 2014.
+						</p>
+						<p>
+							Use-cases, requirements, WebGL and three.js, usage, pros and cons, <em>etc.</em> covered in
+							<a href="https://indico.cern.ch/event/505613/contributions/2228350/" target="_blank">talk at CHEP</a>
+							 and <a href="https://indico.cern.ch/event/570249/contributions/2450053/subcontributions/218722" target="_blank">
+								talk at HSF workshop</a> in San Diego.
+						</p>
+					</section>
+					<section>
+						<p>
+							Here, I want to:
+						</p>
+						<ul>
+							<li>Say a bit on the data models, <em>i.e.</em> going from CMS EDM .root to 3D display in the browser</li>
+							<li>Do a quick tour of the features</li>
+							<li>Say a bit about the current status and future plans</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
-					...
+					<section>
+						<h2>Data models</h2>
+					</section>
+					<section>
+						<img style="border:0; box-shadow:none; background:none; margin:0;" src='img/edm2three.png'></img>
+					</section>
+				</section>
+
+				<section>
+					<h2>Features</h2>
+					<section>
+						<ul>
+							<li>
+								Lightweight client-side application written in JavaScript, HTML, and CSS; local file access via FileAPI
+							</li>
+							<li>
+								Views: 3D, tree, table
+							</li>
+							<li>
+								Standard event display controls: load event, prev/next event, home view,
+								zoom in/out, view along axes, perspective/orthographic cameras
+							</li>
+							<li>
+								Correlated (between table and 3D views) of phyiscs objects
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<ul>
+							<li>
+								Touch events enabled so works on mobiles, tablets, <em>etc.</em>
+							</li>
+							<li>
+								Switching between WebGL, canvas, and SVG
+							</li>
+							<li>
+								bootstrap.js for layout; scaleable for mobile devices
+							</li>
+							<li>
+								Default animation sequence
+							</li>
+							<li>
+								Import/export of 3D files
+							</li>
+							<li>
+								Stereo view for use in Google Cardboard in mobile browser
+							</li>
+						</ul>
+					</section>
+				</section>
+
+
+				<section>
+					<h2>Demo</h2>
+					<a href="http://cern.ch/test-ispy-webgl" data-preview-link>
+						<img src="./img/demo.png"></img>
+					</a>
+				</section>
+
+				<section>
+					<section>
+						<h2>Status</h2>
+						<ul>
+							<li>
+								Since first release in Dec 2014 <a href="http://cern.ch/ispy-webgl" target="_blank">iSpy WebGL</a>
+								 has been used by thousands in <a href="http://physicsmasterclasses.org/" target="_blank">CMS masterclasses</a>,
+								via <a href="http://opendata.cern.ch/visualise/events/CMS" target="_blank">CERN Open Data Portal</a>, and in CMS.
+							</li>
+							<li>
+								Images and animations
+							</li>
+							<li>
+								Latest: update to three.js r83, bug fixes and improvements $\rightarrow$ release (coming soon)
+							</li>
+					</section>
+					<section>
+						<h2>Plans</h2>
+						<ul>
+							<li>
+								Add dedicated R$\Phi$ RZ views
+							</li>
+							<li>
+								Improve and extend 3D geometry import/export
+							</li>
+							<li>
+								Improve configuration and export of animations
+							</li>
+							<li>
+								Improve style configuration handling
+							</li>
+							<li>
+								WebGL2, WebVR
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section data-background-iframe="bg.html">
+					<h3 style="color:white;">Thank you</h3>
 				</section>
 
 			</div>
